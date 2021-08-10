@@ -26,7 +26,7 @@ async def filter(client, message):
         except UserNotParticipant:
             await client.send_message(
                 chat_id=message.from_user.id,
-                text="**♦️ READ THIS INSTRUCTION ♦️</b>\n\n<i>🗣 നിങ്ങൾ ചോദിക്കുന്ന സിനിമകൾ നിങ്ങൾക്ക് ലഭിക്കണം എന്നുണ്ടെങ്കിൽ നിങ്ങൾ താഴെ കൊടുത്തിട്ടുള്ള ചാനലിൽ ജോയിൻ ചെയ്യണം. ജോയിൻ ചെയ്ത ശേഷം വീണ്ടും ഗ്രൂപ്പിൽ പോയി ആ ബട്ടനിൽ അമർത്തിയാൽ നിങ്ങൾക്ക് ഞാൻ ആ സിനിമ പ്രൈവറ്റ് ആയി അയച്ചു തരുന്നതാണ്..😍\n\n🗣 In Order To Get The Movie Requested By You in Our Groups, You Will Have To Join Our Official Channel First. After That, Try Accessing That Movie Again From Our Group. I'll Send You That Movie Privately 🙈</i>\n\n<b>👇 JOIN THIS CHANNEL & TRY 👇\n\n[{invite_link.invite_link}]**</b>",
+                text="**♦️ READ THIS INSTRUCTION ♦️**\n\n__🗣 നിങ്ങൾ ചോദിക്കുന്ന സിനിമകൾ നിങ്ങൾക്ക് ലഭിക്കണം എന്നുണ്ടെങ്കിൽ നിങ്ങൾ താഴെ കൊടുത്തിട്ടുള്ള ചാനലിൽ ജോയിൻ ചെയ്യണം. ജോയിൻ ചെയ്ത ശേഷം വീണ്ടും ഗ്രൂപ്പിൽ പോയി ആ ബട്ടനിൽ അമർത്തിയാൽ നിങ്ങൾക്ക് ഞാൻ ആ സിനിമ പ്രൈവറ്റ് ആയി അയച്ചു തരുന്നതാണ്..😍\n\n🗣 In Order To Get The Movie Requested By You in Our Groups, You Will Have To Join Our Official Channel First. After That, Try Accessing That Movie Again From Our Group. I'll Send You That Movie Privately 🙈__\n\n**👇 JOIN THIS CHANNEL & TRY 👇\n\n[{invite_link}]**</b>",
                     reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -310,7 +310,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     )
         elif query.data.startswith("checksub"):
             if AUTH_CHANNEL and not await is_subscribed(client, query):
-                await query.answer("I Like Your Smartness, But Don't Be Oversmart 😒",show_alert=True)
+                await query.answer("പോയി ചാനൽ സബ്സ്ക്രൈബ് ചെയ്യടാ മോനെ🙃😎\n\nSubscribe our channel dude 🙈",show_alert=True)
                 return
             ident, file_id = query.data.split("#")
             filedetails = await get_file_details(file_id)
