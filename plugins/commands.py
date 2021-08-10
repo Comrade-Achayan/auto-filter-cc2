@@ -68,7 +68,7 @@ async def start(bot, cmd):
                     [
                         InlineKeyboardButton('🙃Channel🙃', url="https://t.me/joinchat/w_dsk1rXMlBmY2M1"
                     ]
-                    ]
+               ]
                 await bot.send_cached_media(
                     chat_id=cmd.from_user.id,
                     file_id=file_id,
