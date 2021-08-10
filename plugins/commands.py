@@ -97,8 +97,8 @@ async def start(bot, cmd):
     else:
         await cmd.reply_sticker(
             START_MSG,
-            parse_mode="Markdown",
-            disable_web_page_preview=True,
+          #  parse_mode="Markdown",
+         #   disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
