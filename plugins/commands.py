@@ -199,4 +199,4 @@ async def bot_info(bot, message):
             InlineKeyboardButton('Source Code', url='https://github.com/subinps/Media-Search-bot')
         ]
         ]
-    await message.reply(text="<b>Developer : @Comrade_Achayan</b>)
+    await message.reply(text="<b>Developer : @Comrade_Achayan</b>")
