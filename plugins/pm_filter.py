@@ -319,8 +319,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     parse_mode="markdown",
                     disable_web_page_preview=True
             )
-            return
-                
+            return               
                 await query.answer()
                 await client.send_cached_media(
                     chat_id=query.from_user.id,
