@@ -319,14 +319,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         parse_mode="markdown",
                         disable_web_page_preview=True
                         )
-                        return
+                    return
 
-                    await client.send_cached_media(
-                        chat_id=query.from_user.id,
-                        file_id=file_id,
-                        caption=f_caption,
-                        reply_markup=InlineKeyboardMarkup(buttons)
-                        )
+                await client.send_cached_media(
+                    chat_id=query.from_user.id,
+                    file_id=file_id,
+                    caption=f_caption,
+                    reply_markup=InlineKeyboardMarkup(buttons)
+                    )
         elif query.data.startswith("checksub"):
             if AUTH_CHANNEL and not await is_subscribed(client, query):
                 await query.answer("പോയി ചാനൽ സബ്സ്ക്രൈബ് ചെയ്യടാ മോനെ🙃😎\n\nSubscribe our channel dude 🙈",show_alert=True)
