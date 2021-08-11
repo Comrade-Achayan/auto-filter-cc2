@@ -304,7 +304,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
             if AUTH_CHANNEL and not await is_subscribed(client, query):
                 await client.send_message(
-                    chat_id=message.from_user.id,
+                    chat_id=query.from_user.id,
                     text="**♦️ READ THIS INSTRUCTION ♦️**\n\n__🗣 നിങ്ങൾ ചോദിക്കുന്ന സിനിമകൾ നിങ്ങൾക്ക് ലഭിക്കണം എന്നുണ്ടെങ്കിൽ നിങ്ങൾ താഴെ കൊടുത്തിട്ടുള്ള ചാനലിൽ ജോയിൻ ചെയ്യണം. ജോയിൻ ചെയ്ത ശേഷം വീണ്ടും ഗ്രൂപ്പിൽ പോയി ആ ബട്ടനിൽ അമർത്തിയാൽ നിങ്ങൾക്ക് ഞാൻ ആ സിനിമ പ്രൈവറ്റ് ആയി അയച്ചു തരുന്നതാണ്..😍\n\n🗣 In Order To Get The Movie Requested By You in Our Groups, You Will Have To Join Our Official Channel First. After That, Try Accessing That Movie Again From Our Group. I'll Send You That Movie Privately 🙈__\n\n**👇 JOIN THIS CHANNEL & TRY 👇\n\n[{invite_link}]**</b>",
                     reply_markup=InlineKeyboardMarkup(
                         [
@@ -319,8 +319,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     parse_mode="markdown",
                     disable_web_page_preview=True
             )
-            return               
-                await query.answer()
+            return
                 await client.send_cached_media(
                     chat_id=query.from_user.id,
                     file_id=file_id,
