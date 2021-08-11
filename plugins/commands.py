@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 @Client.on_message(filters.command("start"))
 async def start(bot, cmd):
     usr_cmdall1 = cmd.text
-    if usr_cmdall1.startswith("/start subinps"):
+    if usr_cmdall1.startswith("/start qmp_cinemas"):
         if AUTH_CHANNEL:
             invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL))
             try:
@@ -38,7 +38,7 @@ async def start(bot, cmd):
                             ]
                         ]
                     ),
-                    parse_mode="markdown"
+                    parse_mode="html"
                 )
                 return
             except Exception:
@@ -95,6 +95,7 @@ async def start(bot, cmd):
                         ]
                     )
             ),
+            parse_mode="html"
     else:
         await cmd.reply_sticker(
             START_MSG,
