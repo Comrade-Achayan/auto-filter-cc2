@@ -52,10 +52,10 @@ async def filter(client, message):
         btn = []
         search = message.text
         files = await get_filter_results(query=search)
+        btn.append(
+            [InlineKeyboardButton("💢 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗮𝗶𝗻 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 💢", url=invite_link.invite_link)]
+        )
         if files:
-           btn.append(
-               [InlineKeyboardButton("💢 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗮𝗶𝗻 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 💢", url=invite_link.invite_link)]
-           )
             for file in files:
                 file_id = file.file_id
                 filename = f"[{get_size(file.file_size)}] {file.file_name}"
@@ -121,10 +121,10 @@ async def group(client, message):
             nyva=botusername.username
             BOT["username"]=nyva
         files = await get_filter_results(query=search)
-        if files:
-           btn.append(
+        btn.append(
                [InlineKeyboardButton("💢 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗮𝗶𝗻 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 💢", url=invite_link.invite_link)]
            )
+        if files:
             for file in files:
                 file_id = file.file_id
                 filename = f"[{get_size(file.file_size)}] {file.file_name}"
