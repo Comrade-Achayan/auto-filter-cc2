@@ -44,3 +44,4 @@ if OMDB_API_KEY.strip() == "":
     API_KEY=None
 else:
     API_KEY=OMDB_API_KEY
+FILTER_PIC = environ['FILTER_PIC']
