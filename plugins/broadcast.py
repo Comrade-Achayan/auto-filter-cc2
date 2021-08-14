@@ -38,7 +38,7 @@ async def broadcast(client, message: Message):
             [
                 [
                     InlineKeyboardButton(text = 'Yes', callback_data = 'bdcast_cnfrm'),
-                    InlineKeyboardButton(text = 'No', callback_data = 'close')
+                    InlineKeyboardButton(text = 'No', callback_data = 'nobroad')
                 ]
             ]
         )
@@ -91,3 +91,14 @@ Failed : {str(peerid)}"""
     await query.message.reply(text)
     await query.message.delete()
     await message.delete()
+
+@Client.on_callback_query(filters.regex(r'^nobroad$'))
+async def close_cbb(client, query: CallbackQuery):
+    try:
+        await query.message.reply_to_message.delete()
+    except:
+        pass
+    try:
+        await query.message.delete()
+    except:
+        pass
