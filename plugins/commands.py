@@ -31,7 +31,7 @@ async def start(bot, cmd):
                 ident, file_id = cmd.text.split("_-_-_-_")
                 await bot.send_message(
                     chat_id=cmd.from_user.id,
-                    text="<b>♦️ READ THIS INSTRUCTION ♦️</b>\n\n<i>🗣 നിങ്ങൾ ചോദിക്കുന്ന സിനിമകൾ നിങ്ങൾക്ക് ലഭിക്കണം എന്നുണ്ടെങ്കിൽ നിങ്ങൾ താഴെ കൊടുത്തിട്ടുള്ള ചാനലിൽ ജോയിൻ ചെയ്യണം. ജോയിൻ ചെയ്ത ശേഷം വീണ്ടും ഗ്രൂപ്പിൽ പോയി ആ ബട്ടനിൽ അമർത്തിയാൽ നിങ്ങൾക്ക് ഞാൻ ആ സിനിമ പ്രൈവറ്റ് ആയി അയച്ചു തരുന്നതാണ്..😍\n\n🗣 In Order To Get The Movie Requested By You in Our Groups, You Will Have To Join Our Official Channel First. After That, Try Accessing That Movie Again From Our Group. I'll Send You That Movie Privately 🙈</i>\n\n<b>👇 JOIN THIS CHANNEL & TRY 👇\n\n[https://t.me/joinchat/w_dsk1rXMlBmY2M1]</b>",
+                    text="<b>♦️ READ THIS INSTRUCTION ♦️</b>\n\n<i>🗣 നിങ്ങൾ ചോദിക്കുന്ന സിനിമകൾ നിങ്ങൾക്ക് ലഭിക്കണം എന്നുണ്ടെങ്കിൽ നിങ്ങൾ താഴെ കൊടുത്തിട്ടുള്ള ചാനലിൽ ജോയിൻ ചെയ്യണം. ജോയിൻ ചെയ്ത ശേഷം വീണ്ടും ഗ്രൂപ്പിൽ പോയി ആ ബട്ടനിൽ അമർത്തിയാൽ നിങ്ങൾക്ക് ഞാൻ ആ സിനിമ പ്രൈവറ്റ് ആയി അയച്ചു തരുന്നതാണ്..😍\n\n🗣 In Order To Get The Movie Requested By You in Our Groups, You Will Have To Join Our Official Channel First. After That, Try Accessing That Movie Again From Our Group. I'll Send You That Movie Privately 🙈</i>\n\n<b>👇 JOIN THIS CHANNEL & TRY 👇\n\n[https://t.me/Cinema_Collections]</b>",
                     disable_web_page_preview=True,
                     reply_markup=InlineKeyboardMarkup(
                         [
@@ -71,7 +71,7 @@ async def start(bot, cmd):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('🙃Channel🙃', url="https://t.me/joinchat/w_dsk1rXMlBmY2M1")
+                        InlineKeyboardButton('🙃Channel🙃', url="https://t.me/Cinema_Collections")
                     ]
                     ]
                 await bot.send_cached_media(
@@ -88,7 +88,7 @@ async def start(bot, cmd):
         await bot.send_message(
             chat_id=cmd.from_user.id,
              #Join My Updates Channel to use this Bot!**",
-            text="**♦️ READ THIS INSTRUCTION ♦️**\n\n__🗣 നിങ്ങൾ ചോദിക്കുന്ന സിനിമകൾ നിങ്ങൾക്ക് ലഭിക്കണം എന്നുണ്ടെങ്കിൽ നിങ്ങൾ താഴെ കൊടുത്തിട്ടുള്ള ചാനലിൽ ജോയിൻ ചെയ്യണം. ജോയിൻ ചെയ്ത ശേഷം വീണ്ടും ഗ്രൂപ്പിൽ പോയി ആ ബട്ടനിൽ അമർത്തിയാൽ നിങ്ങൾക്ക് ഞാൻ ആ സിനിമ പ്രൈവറ്റ് ആയി അയച്ചു തരുന്നതാണ്..😍\n\n🗣 In Order To Get The Movie Requested By You in Our Groups, You Will Have To Join Our Official Channel First. After That, Try Accessing That Movie Again From Our Group. I'll Send You That Movie Privately 🙈__\n\n**👇 JOIN THIS CHANNEL & TRY 👇\n\n[https://t.me/joinchat/w_dsk1rXMlBmY2M1]**",
+            text="**♦️ READ THIS INSTRUCTION ♦️**\n\n__🗣 നിങ്ങൾ ചോദിക്കുന്ന സിനിമകൾ നിങ്ങൾക്ക് ലഭിക്കണം എന്നുണ്ടെങ്കിൽ നിങ്ങൾ താഴെ കൊടുത്തിട്ടുള്ള ചാനലിൽ ജോയിൻ ചെയ്യണം. ജോയിൻ ചെയ്ത ശേഷം വീണ്ടും ഗ്രൂപ്പിൽ പോയി ആ ബട്ടനിൽ അമർത്തിയാൽ നിങ്ങൾക്ക് ഞാൻ ആ സിനിമ പ്രൈവറ്റ് ആയി അയച്ചു തരുന്നതാണ്..😍\n\n🗣 In Order To Get The Movie Requested By You in Our Groups, You Will Have To Join Our Official Channel First. After That, Try Accessing That Movie Again From Our Group. I'll Send You That Movie Privately 🙈__\n\n**👇 JOIN THIS CHANNEL & TRY 👇\n\n[https://t.me/Cinema_Collections]**",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                         [
@@ -103,17 +103,17 @@ async def start(bot, cmd):
             )
     else:
         await cmd.reply_sticker(
-            text=START_MSG.format(update.from_user.full_name, await Client.get.me().first_name)
+            text=Translation.START_TEXT.format(update.from_user.full_name, await Client.get.me().first_name)
           #  parse_mode="Markdown",
          #   disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton('⚜️Channel⚜️', url='https://t.me/joinchat/w_dsk1rXMlBmY2M1'),
-                        InlineKeyboardButton('⚜️Group⚜️', url ='https://t.me/joinchat/VYcPZ75C1XYc9KI1')
+                        InlineKeyboardButton("⚜️Wᴇʙ sᴇʀɪᴇS⚜️", url="https://t.me/Series_Studio"),
+                        InlineKeyboardButton("⚜️GʀᴏᴜP⚜️", url="https://t.me/joinchat/4Lf0K-ckU9cwNTc1"),
                     ],
                     [
-                        InlineKeyboardButton('Admin😁😁', url='https://t.me/comrade_achayan')
+                        InlineKeyboardButton("⭕️CʜᴀɴɴᴇL ⭕️", url="https://t.me/Cinema_Collections")
                     ]
                 ]
             )
