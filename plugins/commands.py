@@ -6,6 +6,7 @@ from info import START_MSG, CHANNELS, ADMINS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION
 from utils import Media, get_file_details
 from pyrogram.errors import UserNotParticipant
 from db.users import present_in_userbase, add_to_userbase
+from translation import Translation
 logger = logging.getLogger(__name__)
 
 @Client.on_message(filters.command("start"))
@@ -102,7 +103,7 @@ async def start(bot, cmd):
             )
     else:
         await cmd.reply_sticker(
-            START_MSG,
+            text=START_MSG.format(update.from_user.full_name, await Client.get.me().first_name)
           #  parse_mode="Markdown",
          #   disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
