@@ -5,7 +5,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from info import START_MSG, CHANNELS, ADMINS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION
 from utils import Media, get_file_details
 from pyrogram.errors import UserNotParticipant
-from users import present_in_userbase, add_to_userbase
+from db.users import present_in_userbase, add_to_userbase
 logger = logging.getLogger(__name__)
 
 @Client.on_message(filters.command("start"))
