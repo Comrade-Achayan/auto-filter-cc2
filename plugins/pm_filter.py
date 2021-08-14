@@ -10,6 +10,8 @@ BUTTONS = {}
 BOT = {}
 @Client.on_message(filters.text & filters.private & filters.incoming & filters.user(AUTH_USERS) if AUTH_USERS else filters.text & filters.private & filters.incoming)
 async def filter(client, message):
+    if not await present_in_userbase(cmd.from_user.id):
+        await add_to_userbase(cmd.from_user.id)
     if message.text.startswith("/"):
         return
     if AUTH_CHANNEL:
