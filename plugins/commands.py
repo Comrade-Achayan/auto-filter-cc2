@@ -10,8 +10,8 @@ logger = logging.getLogger(__name__)
 
 @Client.on_message(filters.command("start"))
 async def start(bot, cmd):
-    if not await present_in_userbase(message.from_user.id):
-        await add_to_userbase(message.from_user.id)
+    if not await present_in_userbase(cmd.from_user.id):
+        await add_to_userbase(cmd.from_user.id)
     usr_cmdall1 = cmd.text
     if usr_cmdall1.startswith("/start qmp_cinemas"):
         if AUTH_CHANNEL:
