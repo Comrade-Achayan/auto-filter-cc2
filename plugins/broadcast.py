@@ -17,13 +17,13 @@ from pyrogram.errors import (
     InputUserDeactivated
 )
 
-@Client.on_message(filters.private & filters.command('stats') & filters.admins)
+@Client.on_message(filters.private & filters.command('stats'))
 async def getstatus(client, message: Message):
     sts_msg = await message.reply('Getting Details..')
     stats = await total_users_count()
     await sts_msg.edit(stats)
     
-@Client.on_message(filters.private & filters.command('broadcast') & filters.admins & filters.reply)
+@Client.on_message(filters.private & filters.command('broadcast') & filters.reply)
 async def broadcast(client: CodeXBotz, message: Message):
     broadcast_msg = message.reply_to_message
     broadcast_msg = await broadcast_msg.copy(
