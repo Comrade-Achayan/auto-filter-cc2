@@ -28,3 +28,7 @@ async def get_users():
 async def del_from_userbase(user_id: int):
     user_collection.delete_one({'_id': user_id})
     return
+
+async def total_users_count(self):
+        count = await user_collection.count_documents({})
+        return count
