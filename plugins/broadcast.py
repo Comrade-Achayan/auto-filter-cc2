@@ -44,7 +44,7 @@ async def broadcast(client, message: Message):
     )
     return
 
-@Client.on_callback_query(filters.admins & filters.regex('^bdcast_cnfrm$'))
+@Client.on_callback_query(filters.regex('^bdcast_cnfrm$'))
 async def broadcast_confrm(client, query):
     if not query.message.reply_to_message:
         await query.answer(
