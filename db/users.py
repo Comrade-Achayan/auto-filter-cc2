@@ -29,7 +29,7 @@ async def del_from_userbase(user_id: int):
     user_collection.delete_one({'_id': user_id})
     return
 
-async def total_users_count():
+async def get_status():
     no_users = user_collection.find().count()
 
     stats_text = f"""<b>Total users:</b> <i>{no_users}</i>"""
