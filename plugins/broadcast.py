@@ -6,7 +6,7 @@ from pyrogram.types import (
     InlineKeyboardButton
 )
 from db.users import (
-    total_users_count,
+    get_status,
     get_users,
     del_from_userbase
 )
@@ -20,8 +20,9 @@ from pyrogram.errors import (
 
 @Client.on_message(filters.private & filters.command('stats'))
 async def getstatus(client, message: Message):
-    total_users = await get_users().count()
-    await message.reply_text(text=f"**Total Users in DB:** `{total_users}`")
+    sts_msg = await message.reply('Getting Details..')
+    stats = await get_status()
+    await sts_msg.edit(stats)
     
 @Client.on_message(filters.private & filters.command('broadcast') & filters.reply)
 async def broadcast(client, message: Message):
