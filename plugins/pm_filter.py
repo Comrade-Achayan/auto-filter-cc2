@@ -122,7 +122,7 @@ async def group(client, message):
             BOT["username"]=nyva
         files = await get_filter_results(query=search)
         btn.append(
-               [InlineKeyboardButton("💢 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗮𝗶𝗻 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 💢", url=invite_link.invite_link)]
+               [InlineKeyboardButton("💢 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗮𝗶𝗻 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 💢", url="https://t.me/joinchat/jzMU5dGQY_g3M2M1")]
            )
         if files:
             for file in files:
