@@ -30,5 +30,8 @@ async def del_from_userbase(user_id: int):
     return
 
 async def total_users_count():
-        count = await user_collection.count_documents({})
-        return count
+    no_users = user_collection.find().count()
+
+    stats_text = f"""<b>Total users:</b> <i>{no_users}</i>"""
+
+    return stats_text
