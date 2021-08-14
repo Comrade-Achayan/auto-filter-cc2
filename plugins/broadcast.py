@@ -24,7 +24,7 @@ async def getstatus(client, message: Message):
     await sts_msg.edit(stats)
     
 @Client.on_message(filters.private & filters.command('broadcast') & filters.reply)
-async def broadcast(client: CodeXBotz, message: Message):
+async def broadcast(client, message: Message):
     broadcast_msg = message.reply_to_message
     broadcast_msg = await broadcast_msg.copy(
         chat_id = message.chat.id,
@@ -45,7 +45,7 @@ async def broadcast(client: CodeXBotz, message: Message):
     return
 
 @Client.on_callback_query(filters.admins & filters.regex('^bdcast_cnfrm$'))
-async def broadcast_confrm(client: CodeXBotz, query):
+async def broadcast_confrm(client, query):
     if not query.message.reply_to_message:
         await query.answer(
             text = 'Message not found',
