@@ -16,12 +16,11 @@ from pyrogram.errors import (
     UserIsBlocked,
     InputUserDeactivated
 )
-db = Database(info.DATABASE_URI, info.DATABASE_Name)
 
 
 @Client.on_message(filters.private & filters.command('stats'))
 async def getstatus(client, message: Message):
-    total_users = await db.total_users_count()
+    total_users = await get_users().count()
     await message.reply_text(text=f"**Total Users in DB:** `{total_users}`")
     
 @Client.on_message(filters.private & filters.command('broadcast') & filters.reply)
