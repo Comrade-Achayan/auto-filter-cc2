@@ -18,13 +18,13 @@ from pyrogram.errors import (
 )
 from info import ADMINS
 
-@Client.on_message(filters.private & filters.command('stats') & filters.users(ADMINS))
+@Client.on_message(filters.private & filters.command('stats') & filters.user(ADMINS))
 async def getstatus(client, message: Message):
     sts_msg = await message.reply('Getting Details..')
     stats = await get_status()
     await sts_msg.edit(stats)
     
-@Client.on_message(filters.private & filters.command('broadcast') & filters.reply & filters.users(ADMINS))
+@Client.on_message(filters.private & filters.command('broadcast') & filters.reply & filters.user(ADMINS))
 async def broadcast(client, message: Message):
     broadcast_msg = message.reply_to_message
     broadcast_msg = await broadcast_msg.copy(
