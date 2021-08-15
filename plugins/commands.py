@@ -103,7 +103,6 @@ async def start(bot, cmd):
             )
     else:
         await cmd.reply_text(
-            chat_id=cmd.chat.id,
             text=Translation.START_TEXT.format(cmd.from_user.first_name),
             parse_mode="html",
             disable_web_page_preview=True,
