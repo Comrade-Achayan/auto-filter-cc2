@@ -104,8 +104,8 @@ async def start(bot, cmd):
     else:
         await cmd.reply_message(
             text=Translation.START_TEXT.format(update.from_user.full_name, await Client.get.me().first_name)
-          #  parse_mode="Markdown",
-         #   disable_web_page_preview=True,
+            parse_mode="Markdown",
+            disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
