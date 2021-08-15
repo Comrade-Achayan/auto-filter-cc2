@@ -113,7 +113,7 @@ async def filter(client, message):
             poster=await get_poster(search)
         if poster:
             await message.reply_photo(photo=poster, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code>\n\n<b>©  Cɪɴᴇᴍᴀ Cᴏʟʟᴇᴄᴛɪᴏɴs</b>", reply_markup=InlineKeyboardMarkup(buttons))
-         else:
+        else:
             await message.reply_photo(photo=FILTER_PIC, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code>\n\n<b>©  Cɪɴᴇᴍᴀ Cᴏʟʟᴇᴄᴛɪᴏɴs</b>", reply_markup=InlineKeyboardMarkup(buttons))
 
     if not await present_in_userbase(message.from_user.id):
