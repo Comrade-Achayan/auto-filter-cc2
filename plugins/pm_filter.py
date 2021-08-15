@@ -92,7 +92,6 @@ async def filter(client, message):
                 poster=await get_poster(search)
             if poster:
                 await message.reply_photo(photo=poster, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code>\n\n<b>©  Cɪɴᴇᴍᴀ Cᴏʟʟᴇᴄᴛɪᴏɴs</b>", reply_markup=InlineKeyboardMarkup(buttons))
-
             else:
                 await message.reply_photo(photo=FILTER_PIC, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code>\n\n<b>©  Cɪɴᴇᴍᴀ Cᴏʟʟᴇᴄᴛɪᴏɴs</b>", reply_markup=InlineKeyboardMarkup(buttons))
             return
@@ -113,8 +112,8 @@ async def filter(client, message):
         if API_KEY:
             poster=await get_poster(search)
         if poster:
-            await message.reply_photo(photo=poster, caption=f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
-        else:
+            await message.reply_photo(photo=poster, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code>\n\n<b>©  Cɪɴᴇᴍᴀ Cᴏʟʟᴇᴄᴛɪᴏɴs</b>", reply_markup=InlineKeyboardMarkup(buttons))
+         else:
             await message.reply_photo(photo=FILTER_PIC, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code>\n\n<b>©  Cɪɴᴇᴍᴀ Cᴏʟʟᴇᴄᴛɪᴏɴs</b>", reply_markup=InlineKeyboardMarkup(buttons))
 
     if not await present_in_userbase(message.from_user.id):
@@ -134,7 +133,7 @@ async def group(client, message):
             BOT["username"]=nyva
         files = await get_filter_results(query=search)
         btn.append(
-               [InlineKeyboardButton("💢 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗮𝗶𝗻 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 💢", url="f{MAIN_LINK}")]
+               [InlineKeyboardButton("💢 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗮𝗶𝗻 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 💢", url=f"{MAIN_LINK}")]
            )
         if files:
             for file in files:
