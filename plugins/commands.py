@@ -103,8 +103,8 @@ async def start(bot, cmd):
             )
     else:
         await cmd.reply_text(
-            chat_id=update.chat.id,
-            text=Translation.START_TEXT.format(update.from_user.full_name, await Client.get.me().first_name),
+            chat_id=cmd.chat.id,
+            text=Translation.START_TEXT.format(cmd.from_user.full_name, await bot.get.me().first_name),
             parse_mode="html",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
