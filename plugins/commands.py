@@ -14,7 +14,7 @@ async def start(bot, cmd):
     if not await present_in_userbase(cmd.from_user.id):
         await add_to_userbase(cmd.from_user.id)
     usr_cmdall1 = cmd.text
-    if usr_cmdall1.startswith("/start qmp_cinemas"):
+    if usr_cmdall1.startswith("/start cc"):
         if AUTH_CHANNEL:
             invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL))
             try:
