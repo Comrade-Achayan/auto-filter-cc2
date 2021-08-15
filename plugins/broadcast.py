@@ -93,7 +93,7 @@ Failed : {str(peerid)}"""
     await message.delete()
 
 @Client.on_callback_query(filters.regex(r'^nobroad$'))
-async def close_cbb(client, query: CallbackQuery):
+async def close_cbb(client, query):
     try:
         await query.message.reply_to_message.delete()
     except:
