@@ -112,9 +112,9 @@ async def filter(client, message):
         if API_KEY:
             poster=await get_poster(search)
         if poster:
-            await message.reply_photo(photo=poster, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code>hshdhdhddhhddh\n\n<b© 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 𝐌𝐨𝐭𝐢𝐨𝐧 𝐏𝐢𝐜𝐭𝐮𝐫𝐞𝐬</b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_photo(photo=poster, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code> \n\n<b© 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 𝐌𝐨𝐭𝐢𝐨𝐧 𝐏𝐢𝐜𝐭𝐮𝐫𝐞𝐬</b>", reply_markup=InlineKeyboardMarkup(buttons))
         else:
-            await message.reply_photo(photo=FILTER_PIC, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code>\n\n<b>© 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 𝐌𝐨𝐭𝐢𝐨𝐧 𝐏𝐢𝐜𝐭𝐮𝐫𝐞𝐬</b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_photo(photo=FILTER_PIC, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code> \n\n<b>© 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 𝐌𝐨𝐭𝐢𝐨𝐧 𝐏𝐢𝐜𝐭𝐮𝐫𝐞𝐬</b>", reply_markup=InlineKeyboardMarkup(buttons))
 
     if not await present_in_userbase(message.from_user.id):
         await add_to_userbase(message.from_user.id)
@@ -166,9 +166,9 @@ async def group(client, message):
             if API_KEY:
                 poster=await get_poster(search)
             if poster:
-                await message.reply_photo(photo=poster, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code>\n\n<b© 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 𝐌𝐨𝐭𝐢𝐨𝐧 𝐏𝐢𝐜𝐭𝐮𝐫𝐞𝐬</b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_photo(photo=poster, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code> \n\n<b© 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 𝐌𝐨𝐭𝐢𝐨𝐧 𝐏𝐢𝐜𝐭𝐮𝐫𝐞𝐬</b>", reply_markup=InlineKeyboardMarkup(buttons))
             else:
-                await message.reply_photo(photo=FILTER_PIC, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code>\n\n<b>© 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 𝐌𝐨𝐭𝐢𝐨𝐧 𝐏𝐢𝐜𝐭𝐮𝐫𝐞𝐬</b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_photo(photo=FILTER_PIC, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code> \n\n<b>© 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 𝐌𝐨𝐭𝐢𝐨𝐧 𝐏𝐢𝐜𝐭𝐮𝐫𝐞𝐬</b>", reply_markup=InlineKeyboardMarkup(buttons))
             return
 
         data = BUTTONS[keyword]
@@ -187,9 +187,9 @@ async def group(client, message):
         if API_KEY:
             poster=await get_poster(search)
         if poster:
-            await message.reply_photo(photo=poster, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code>\n\n<b>© 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 𝐌𝐨𝐭𝐢𝐨𝐧 𝐏𝐢𝐜𝐭𝐮𝐫𝐞𝐬</b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_photo(photo=poster, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code> \n\n<b>© 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 𝐌𝐨𝐭𝐢𝐨𝐧 𝐏𝐢𝐜𝐭𝐮𝐫𝐞𝐬</b>", reply_markup=InlineKeyboardMarkup(buttons))
         else:
-            await message.reply_photo(photo=FILTER_PIC, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code>\n\n<b>© 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 𝐌𝐨𝐭𝐢𝐨𝐧 𝐏𝐢𝐜𝐭𝐮𝐫𝐞𝐬</b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_photo(photo=FILTER_PIC, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code> \n\n<b>© 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 𝐌𝐨𝐭𝐢𝐨𝐧 𝐏𝐢𝐜𝐭𝐮𝐫𝐞𝐬</b>", reply_markup=InlineKeyboardMarkup(buttons))
 
     
 def get_size(size):
