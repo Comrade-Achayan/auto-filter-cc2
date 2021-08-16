@@ -102,10 +102,10 @@ async def start(bot, cmd):
                     )
             )
     else:
-        await cmd.reply_text(
-            text=Translation.START_TEXT.format(cmd.from_user.first_name),
-            parse_mode="html",
-            disable_web_page_preview=True,
+        await cmd.reply_sticker(
+            START_MSG,
+   #         parse_mode="html",
+        #    disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
