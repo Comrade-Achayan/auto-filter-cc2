@@ -14,7 +14,7 @@ async def start(bot, cmd):
     if not await present_in_userbase(cmd.from_user.id):
         await add_to_userbase(cmd.from_user.id)
     usr_cmdall1 = cmd.text
-    if usr_cmdall1.startswith("/start cc"):
+    if usr_cmdall1.startswith("/start qmp_cinemas"):
         if AUTH_CHANNEL:
             invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL))
             try:
@@ -71,7 +71,7 @@ async def start(bot, cmd):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('🙃Channel🙃', url="https://t.me/Cinema_Collections")
+                        InlineKeyboardButton('🙃Channel🙃', url="https://t.me/joinchat/w_dsk1rXMlBmY2M1")
                     ]
                     ]
                 await bot.send_cached_media(
@@ -108,12 +108,12 @@ async def start(bot, cmd):
         #    disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [
-                        InlineKeyboardButton("⚜️Wᴇʙ sᴇʀɪᴇS⚜️", url="https://t.me/Series_Studio"),
-                        InlineKeyboardButton("⚜️GʀᴏᴜP⚜️", url="https://t.me/joinchat/4Lf0K-ckU9cwNTc1"),
+                    [                        
+                        InlineKeyboardButton('⚜️Channel⚜️', url='https://t.me/joinchat/w_dsk1rXMlBmY2M1'),
+                        InlineKeyboardButton('⚜️Group⚜️', url ='https://t.me/joinchat/VYcPZ75C1XYc9KI1')
                     ],
                     [
-                        InlineKeyboardButton("⭕️CʜᴀɴɴᴇL ⭕️", url="https://t.me/Cinema_Collections")
+                        InlineKeyboardButton('Admin😁😁', url='https://t.me/comrade_achayan')
                     ]
                 ]
             )
