@@ -61,7 +61,6 @@ async def start(bot, cmd):
                 title = files.file_name
                 size=files.file_size
                 f_caption=files.caption
-                cap=f"<code>{file_name}</code>\n\n<b>┈•••✿  @qMp_CINEMAS  ✿•••┈\n\n➠Cʜᴀɴɴᴇʟ : https://t.me/joinchat/w_dsk1rXMlBmY2M1\n\n➠Gʀᴏᴜᴘ : https://t.me/joinchat/VYcPZ75C1XYc9KI1</b>".format(file_name=files.file_name)
                 if CUSTOM_FILE_CAPTION:
                     try:
                         f_caption=CUSTOM_FILE_CAPTION.format(file_name=title, file_size=size, file_caption=f_caption)
@@ -78,7 +77,7 @@ async def start(bot, cmd):
                 await bot.send_cached_media(
                     chat_id=cmd.from_user.id,
                     file_id=file_id,
-                    caption=cap,
+                    caption=f_caption,
                     parse_mode="html",
                     reply_markup=InlineKeyboardMarkup(buttons)
                     )
