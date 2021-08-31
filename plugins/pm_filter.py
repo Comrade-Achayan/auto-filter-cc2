@@ -335,7 +335,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 await client.send_cached_media(
                     chat_id=query.from_user.id,
                     file_id=file_id,
-                    caption=f_caption,
+                    caption=f"<code>{title}</code>\n\n<b>┈•••✿  @qMp_CINEMAS  ✿•••┈\n\n➠Cʜᴀɴɴᴇʟ : {MAIN_LINK}\n\n➠Gʀᴏᴜᴘ : https://t.me/joinchat/VYcPZ75C1XYc9KI1</b>",
+                    parse_mode="html",
                     reply_markup=InlineKeyboardMarkup(buttons)
                     )
         elif query.data.startswith("checksub"):
@@ -366,7 +367,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 await client.send_cached_media(
                     chat_id=query.from_user.id,
                     file_id=file_id,
-                    caption=f_caption,
+                    caption=f"<code>{title}</code>\n\n<b>┈•••✿  @qMp_CINEMAS  ✿•••┈\n\n➠Cʜᴀɴɴᴇʟ : {MAIN_LINK}\n\n➠Gʀᴏᴜᴘ : https://t.me/joinchat/VYcPZ75C1XYc9KI1</b>",
+                    parse_mode="html",
                     reply_markup=InlineKeyboardMarkup(buttons)
                     )
 
