@@ -51,7 +51,7 @@ async def filter(client, message):
             return
     if re.findall("((^\/|^,|^!|^\.|^[\U0001F600-\U000E007F]).*)", message.text):
         return
-    if 2 < len(message.text) < 100:    
+    if 0 < len(message.text) < 100:    
         btn = []
         search = message.text
         files = await get_filter_results(query=search)
@@ -117,7 +117,7 @@ async def filter(client, message):
 async def group(client, message):
     if re.findall("((^\/|^,|^!|^\.|^[\U0001F600-\U000E007F]).*)", message.text):
         return
-    if 2 < len(message.text) < 50:    
+    if 0 < len(message.text) < 50:    
         btn = []
         search = message.text
         nyva=BOT.get("username")
