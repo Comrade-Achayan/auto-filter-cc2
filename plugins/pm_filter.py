@@ -178,9 +178,10 @@ async def group(client, message):
         if poster:
             msg = await message.reply_photo(photo=poster, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code>\n\n<b>© 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 𝐌𝐨𝐭𝐢𝐨𝐧 𝐏𝐢𝐜𝐭𝐮𝐫𝐞𝐬</b>", reply_markup=InlineKeyboardMarkup(buttons))
         else:
-            msg = await message.reply_photo(photo=FILTER_PIC, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code>\n\n<b>© 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 𝐌𝐨𝐭𝐢𝐨𝐧 𝐏𝐢𝐜𝐭𝐮𝐫𝐞𝐬</b>", reply_markup=InlineKeyboardMarkup(buttons))
-        await asyncio.sleep(120)
+            msg = await message.reply_photo(photo=FILTER_PIC, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code>\n\n<b>This message will be deleted within 3 minutes</b>\n\n<b>© 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 𝐌𝐨𝐭𝐢𝐨𝐧 𝐏𝐢𝐜𝐭𝐮𝐫𝐞𝐬</b>", reply_markup=InlineKeyboardMarkup(buttons))
+        await asyncio.sleep(180)
         await msg.delete()
+     #   await message.delete()
 
     
 def get_size(size):
