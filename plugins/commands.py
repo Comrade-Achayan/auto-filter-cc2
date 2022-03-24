@@ -16,7 +16,7 @@ async def start(bot, cmd):
     usr_cmdall1 = cmd.text
     if usr_cmdall1.startswith("/start qmp_cinemas"):
         if AUTH_CHANNEL:
-            invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL))
+            invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL), creates_join_request=True)
             try:
                 user = await bot.get_chat_member(int(AUTH_CHANNEL), cmd.from_user.id)
                 if user.status == "kicked":
