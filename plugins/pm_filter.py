@@ -16,7 +16,7 @@ async def filter(client, message):
     if message.text.startswith("/"):
         return
     if AUTH_CHANNEL:
-        invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
+        invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL), creates_join_request=True)
         try:
             user = await client.get_chat_member(int(AUTH_CHANNEL), message.from_user.id)
             if user.status == "kicked":
