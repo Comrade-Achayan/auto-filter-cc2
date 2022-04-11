@@ -181,9 +181,9 @@ async def group(client, message):
             msg = await message.reply_photo(photo=poster, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code>\n\n<b>© {message.chat.title}</b>", reply_markup=InlineKeyboardMarkup(buttons))
         else:
             msg = await message.reply_photo(photo=FILTER_PIC, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code>\n\n<b>© {message.chat.title}</b>", reply_markup=InlineKeyboardMarkup(buttons))
-      #  await asyncio.sleep(900)
-     #   await msg.delete()
-     #   await message.delete()
+        await asyncio.sleep(900)
+        await msg.delete()
+        await message.delete()
 
     
 def get_size(size):
