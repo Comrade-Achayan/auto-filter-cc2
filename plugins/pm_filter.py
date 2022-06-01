@@ -85,13 +85,16 @@ async def filter(client, message):
             buttons.append(
                 [InlineKeyboardButton(text="📃 Pages 1/1",callback_data="pages")]
             )
+            buttons.append(
+                [InlineKeyboardButton("✨️𝐒𝐞𝐫𝐢𝐞𝐬 𝐒𝐭𝐮𝐝𝐢𝐨✨️", url="https://t.me/Series_Studio")]
+            )
             poster=None
             if API_KEY:
                 poster=await get_poster(search)
             if poster:
-                await message.reply_photo(photo=poster, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code>\n\n<b>© 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 𝐌𝐨𝐭𝐢𝐨𝐧 𝐏𝐢𝐜𝐭𝐮𝐫𝐞𝐬</b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_photo(photo=poster, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code>\n\n<b>©𝐂𝐢𝐧𝐞𝐦𝐚 𝐂𝐨𝐥𝐥𝐞𝐜𝐭𝐢𝐨𝐧𝐬</b>", reply_markup=InlineKeyboardMarkup(buttons))
             else:
-                await message.reply_photo(photo=FILTER_PIC, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code>\n\n<b>© 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 𝐌𝐨𝐭𝐢𝐨𝐧 𝐏𝐢𝐜𝐭𝐮𝐫𝐞𝐬</b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_photo(photo=FILTER_PIC, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code>\n\n<b>©𝐂𝐢𝐧𝐞𝐦𝐚 𝐂𝐨𝐥𝐥𝐞𝐜𝐭𝐢𝐨𝐧𝐬</b>", reply_markup=InlineKeyboardMarkup(buttons))
             return
 
         data = BUTTONS[keyword]
@@ -103,13 +106,16 @@ async def filter(client, message):
         buttons.append(
             [InlineKeyboardButton(text=f"📃 Pages 1/{data['total']}",callback_data="pages")]
         )
+        buttons.append(
+            [InlineKeyboardButton("✨️𝐒𝐞𝐫𝐢𝐞𝐬 𝐒𝐭𝐮𝐝𝐢𝐨✨️", url="https://t.me/Series_Studio")]
+        )
         poster=None
         if API_KEY:
             poster=await get_poster(search)
         if poster:
-            await message.reply_photo(photo=poster, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code>\n\n<b>© 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 𝐌𝐨𝐭𝐢𝐨𝐧 𝐏𝐢𝐜𝐭𝐮𝐫𝐞𝐬</b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_photo(photo=poster, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code>\n\n<b>©𝐂𝐢𝐧𝐞𝐦𝐚 𝐂𝐨𝐥𝐥𝐞𝐜𝐭𝐢𝐨𝐧𝐬</b>", reply_markup=InlineKeyboardMarkup(buttons))
         else:
-            await message.reply_photo(photo=FILTER_PIC, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code>\n\n<b>© 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 𝐌𝐨𝐭𝐢𝐨𝐧 𝐏𝐢𝐜𝐭𝐮𝐫𝐞𝐬</b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_photo(photo=FILTER_PIC, caption=f"<b>Total Files:</b><code>{len(files)}</code>\n<b>Movie Name:</b> <code>{search}</code>\n\n<b>©𝐂𝐢𝐧𝐞𝐦𝐚 𝐂𝐨𝐥𝐥𝐞𝐜𝐭𝐢𝐨𝐧𝐬</b>", reply_markup=InlineKeyboardMarkup(buttons))
 
     if not await present_in_userbase(message.from_user.id):
         await add_to_userbase(message.from_user.id)
@@ -135,7 +141,7 @@ async def group(client, message):
                 file_id = file.file_id
                 filename = f"[{get_size(file.file_size)}] {file.file_name}"
                 btn.append(
-                    [InlineKeyboardButton(text=f"{filename}", url=f"https://telegram.dog/{nyva}?start=qmp_cinemas_-_-_-_{file_id}")]
+                    [InlineKeyboardButton(text=f"{filename}", url=f"https://telegram.dog/{nyva}?start=cinema_collections_-_-_-_{file_id}")]
                 )
         else:
             return
@@ -153,6 +159,9 @@ async def group(client, message):
             buttons = btn
             buttons.append(
                 [InlineKeyboardButton(text="📃 Pages 1/1",callback_data="pages")]
+            )
+            buttons.append(
+                [InlineKeyboardButton("✨️𝐒𝐞𝐫𝐢𝐞𝐬 𝐒𝐭𝐮𝐝𝐢𝐨✨️", url="https://t.me/Series_Studio")]
             )
             poster=None
             if API_KEY:
@@ -173,6 +182,9 @@ async def group(client, message):
         )    
         buttons.append(
             [InlineKeyboardButton(text=f"📃 Pages 1/{data['total']}",callback_data="pages")]
+        )
+        buttons.append(
+            [InlineKeyboardButton("✨️𝐒𝐞𝐫𝐢𝐞𝐬 𝐒𝐭𝐮𝐝𝐢𝐨✨️", url="https://t.me/Series_Studio")]
         )
         poster=None
         if API_KEY:
@@ -373,7 +385,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 await client.send_cached_media(
                     chat_id=query.from_user.id,
                     file_id=file_id,
-                    caption=f"<code>{title}</code>\n\n<b>┈•••✿  @qMp_CINEMAS  ✿•••┈\n\n➠Cʜᴀɴɴᴇʟ : {MAIN_LINK}\n\n➠Gʀᴏᴜᴘ : https://t.me/joinchat/VYcPZ75C1XYc9KI1</b>",
+                    caption=f_caption,
                     parse_mode="html",
                     reply_markup=InlineKeyboardMarkup(buttons)
                     )
