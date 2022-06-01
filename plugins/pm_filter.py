@@ -75,7 +75,7 @@ async def filter(client, message):
 
         if len(btn) > 10: 
             btns = list(split_list(btn, 10)) 
-            keyword = f"{message.chat.id}-{message.message_id}"
+            keyword = f"{message.chat.id}-{message.id}"
             BUTTONS[keyword] = {
                 "total" : len(btns),
                 "buttons" : btns
@@ -353,7 +353,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 await client.send_cached_media(
                     chat_id=query.from_user.id,
                     file_id=file_id,
-                    caption=f"<code>{title}</code>\n\n<b>┈•••✿  @qMp_CINEMAS  ✿•••┈\n\n➠Cʜᴀɴɴᴇʟ : {MAIN_LINK}\n\n➠Gʀᴏᴜᴘ : https://t.me/joinchat/VYcPZ75C1XYc9KI1</b>",
+                    caption=f_caption,     #┈•••✿  @qMp_CINEMAS  ✿•••┈\n\n➠Cʜᴀɴɴᴇʟ : {MAIN_LINK}</b>",
                     parse_mode="html",
                     reply_markup=InlineKeyboardMarkup(buttons)
                     )
