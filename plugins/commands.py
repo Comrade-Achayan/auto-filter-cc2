@@ -7,6 +7,7 @@ from utils import Media, get_file_details
 from pyrogram.errors import UserNotParticipant
 from db.users import present_in_userbase, add_to_userbase
 from translation import Translation
+from script import Script
 logger = logging.getLogger(__name__)
 
 @Client.on_message(filters.command("start"))
@@ -102,10 +103,10 @@ async def start(bot, cmd):
                     )
             )
     else:
-        await cmd.reply_sticker(
-            START_MSG,
-   #         parse_mode="html",
-        #    disable_web_page_preview=True,
+        await cmd.reply_messgae(
+            text=Script.START_TEXT,
+            parse_mode="html",
+            disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [                        
@@ -207,3 +208,4 @@ async def bot_info(bot, message):
         ]
         ]
     await message.reply(text="<b>Developer : @Comrade_Achayan</b>")
+#hdhhdd
