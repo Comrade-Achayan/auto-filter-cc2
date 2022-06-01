@@ -77,7 +77,7 @@ async def start(bot, cmd):
                 await bot.send_cached_media(
                     chat_id=cmd.from_user.id,
                     file_id=file_id,
-                    caption=f"<code>{title}</code>\n\n<b>┈•••✿  @qMp_CINEMAS  ✿•••┈\n\n➠Cʜᴀɴɴᴇʟ : https://t.me/joinchat/w_dsk1rXMlBmY2M1\n\n➠Gʀᴏᴜᴘ : https://t.me/joinchat/VYcPZ75C1XYc9KI1</b>",
+                    caption=f_caption,
                     parse_mode="html",
                     reply_markup=InlineKeyboardMarkup(buttons)
                     )
