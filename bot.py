@@ -9,6 +9,7 @@ from pyrogram import Client, __version__
 from pyrogram.raw.all import layer
 from utils import Media
 from info import SESSION, API_ID, API_HASH, BOT_TOKEN
+import pyromod.listen
 
 class Bot(Client):
 
@@ -30,7 +31,7 @@ class Bot(Client):
         self.username = '@' + me.username
         print(f"{me.first_name} with for Pyrogram v{__version__} (Layer {layer}) started on {me.username}.")
 
-    async def stop(self, *args):
+    async def stop(self, *args, **kwargs):
         await super().stop()
         print("Bot stopped. Bye.")
 
